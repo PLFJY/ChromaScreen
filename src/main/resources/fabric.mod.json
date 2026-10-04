@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "chromascreen",
+	"version": "${version}",
+	"name": "ChromaScreen",
+	"description": "Flat RGB chroma screen blocks for video production.",
+	"authors": [],
+	"license": "CC0-1.0",
+	"icon": "assets/chromascreen/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.chromascreen.ChromaScreen"
+		],
+		"client": [
+			"com.chromascreen.client.ChromaScreenClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "chromascreen.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
